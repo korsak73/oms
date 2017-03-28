@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ImporterModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Host>.\SQLEXPRESS</Host>
+  <Database>OSM</Database>
+  <Username>wms</Username>
+  <Password>111</Password>
+  <WebPort>0</WebPort>
+</ImporterModel>

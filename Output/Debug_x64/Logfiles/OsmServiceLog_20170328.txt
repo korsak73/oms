@@ -1,0 +1,625 @@
+28.03.2017 10:12:43 - -----------------------------------------
+28.03.2017 10:12:43 - 
+28.03.2017 10:12:43 - 
+28.03.2017 10:12:43 - - Logging started . . .
+28.03.2017 10:12:43 - 
+28.03.2017 10:12:43 - 
+28.03.2017 10:12:43 - -----------------------------------------
+28.03.2017 10:32:42 - System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'tWayCreation' in the database.
+Changed database context to 'OSM'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at osm2mssql.Importer.Tasks.TaskBase.ExecuteSqlCmd(String sqlCommand) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 125
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.CreateTables() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 46
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.DoTaskWork(String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 27
+   at osm2mssql.Importer.Tasks.TaskBase.RunTask(SqlConnectionStringBuilder connection, String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 233
+ClientConnectionId:6629acd1-2ee6-417b-b4e9-3fc242b6de78
+Error Number:2714,State:6,Class:16
+28.03.2017 10:35:43 - -----------------------------------------
+28.03.2017 10:35:43 - 
+28.03.2017 10:35:43 - 
+28.03.2017 10:35:43 - - Logging started . . .
+28.03.2017 10:35:43 - 
+28.03.2017 10:35:43 - 
+28.03.2017 10:35:43 - -----------------------------------------
+28.03.2017 10:46:39 - System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'tWayCreation' in the database.
+Changed database context to 'OSM'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at osm2mssql.Importer.Tasks.TaskBase.ExecuteSqlCmd(String sqlCommand) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 125
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.CreateTables() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 46
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.DoTaskWork(String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 27
+   at osm2mssql.Importer.Tasks.TaskBase.RunTask(SqlConnectionStringBuilder connection, String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 233
+ClientConnectionId:f1e928a5-f4d0-4b8a-8b88-03865d11229d
+Error Number:2714,State:6,Class:16
+28.03.2017 10:53:50 - -----------------------------------------
+28.03.2017 10:53:50 - 
+28.03.2017 10:53:50 - 
+28.03.2017 10:53:50 - - Logging started . . .
+28.03.2017 10:53:50 - 
+28.03.2017 10:53:50 - 
+28.03.2017 10:53:50 - -----------------------------------------
+28.03.2017 10:56:14 - -----------------------------------------
+28.03.2017 10:56:14 - 
+28.03.2017 10:56:14 - 
+28.03.2017 10:56:14 - - Logging started . . .
+28.03.2017 10:56:14 - 
+28.03.2017 10:56:14 - 
+28.03.2017 10:56:14 - -----------------------------------------
+28.03.2017 10:57:13 - Finished Task Install database-extensions - Duration: 00:00:00.4790479
+28.03.2017 10:58:30 - Table: tWayTag
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 10:58:30 - Table: tWayCreation
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 10:58:30 - Table: tNode
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 10:58:30 - Table: tWayCreation
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 10:58:58 - Inserted 1285 relations
+28.03.2017 10:58:58 - Finished Task Reading all relations - Duration: 00:01:44.5914581
+28.03.2017 10:59:38 - Inserted 81527 ways
+28.03.2017 10:59:38 - Finished Task Read all ways - Duration: 00:02:24.4794465
+28.03.2017 11:00:17 - Inserted 1107903 nodes
+28.03.2017 11:00:17 - Finished Task Read all nodes - Duration: 00:03:03.5383520
+28.03.2017 11:01:01 - Finished Task Create indices on tNode/tNodeTag - Duration: 00:00:43.9473943
+28.03.2017 11:01:01 - Finished Task Create indices on tRelation/tRelationTag - Duration: 00:00:43.9493945
+28.03.2017 11:01:11 - Finished Task Create indices on tWay/tNWayTag - Duration: 00:00:54.2474242
+28.03.2017 11:01:12 - Finished Task Write Tags - Duration: 00:00:00.7610761
+28.03.2017 11:02:03 - Finished Task Create a geography object foreach way - Duration: 00:00:51.1741169
+28.03.2017 11:02:20 - Finished Task Create the relations in the database - Duration: 00:00:17.2487247
+28.03.2017 11:02:20 - Finished Task Create all database indicies - Duration: 00:00:00.0750075
+28.03.2017 11:03:50 - Finished Task Custom SQL-Commands after importing - Duration: 00:01:29.2539245
+28.03.2017 11:03:50 - Totalduration: 00:06:37.1362665
+28.03.2017 11:17:18 - -----------------------------------------
+28.03.2017 11:17:18 - 
+28.03.2017 11:17:18 - 
+28.03.2017 11:17:18 - - Logging started . . .
+28.03.2017 11:17:18 - 
+28.03.2017 11:17:18 - 
+28.03.2017 11:17:18 - -----------------------------------------
+28.03.2017 11:17:47 - Finished Task Creates the database structure - Duration: 00:00:04.2094209
+28.03.2017 11:18:19 - Finished Task Install database-extensions - Duration: 00:00:32.1192116
+28.03.2017 11:19:09 - -----------------------------------------
+28.03.2017 11:19:09 - 
+28.03.2017 11:19:09 - 
+28.03.2017 11:19:09 - - Logging started . . .
+28.03.2017 11:19:09 - 
+28.03.2017 11:19:09 - 
+28.03.2017 11:19:09 - -----------------------------------------
+28.03.2017 11:25:54 - -----------------------------------------
+28.03.2017 11:25:54 - 
+28.03.2017 11:25:54 - 
+28.03.2017 11:25:54 - - Logging started . . .
+28.03.2017 11:25:54 - 
+28.03.2017 11:25:54 - 
+28.03.2017 11:25:54 - -----------------------------------------
+28.03.2017 11:26:12 - Finished Task Creates the database structure - Duration: 00:00:02.7892789
+28.03.2017 11:28:46 - -----------------------------------------
+28.03.2017 11:28:46 - 
+28.03.2017 11:28:46 - 
+28.03.2017 11:28:46 - - Logging started . . .
+28.03.2017 11:28:46 - 
+28.03.2017 11:28:46 - 
+28.03.2017 11:28:46 - -----------------------------------------
+28.03.2017 11:29:10 - Finished Task Install database-extensions - Duration: 00:00:03.4123412
+28.03.2017 11:30:55 - Inserted 1285 relations
+28.03.2017 11:30:55 - Finished Task Reading all relations - Duration: 00:01:45.2845274
+28.03.2017 11:31:42 - Inserted 81527 ways
+28.03.2017 11:31:42 - Finished Task Read all ways - Duration: 00:02:03.4533441
+28.03.2017 11:32:14 - Inserted 1107903 nodes
+28.03.2017 11:32:14 - Finished Task Read all nodes - Duration: 00:03:03.7633745
+28.03.2017 11:32:14 - Finished Task Create indices on tRelation/tRelationTag - Duration: 00:00:00.4820482
+28.03.2017 11:32:50 - Finished Task Create indices on tNode/tNodeTag - Duration: 00:00:35.6835680
+28.03.2017 11:32:56 - Finished Task Create indices on tWay/tNWayTag - Duration: 00:00:42.1742170
+28.03.2017 11:32:56 - Finished Task Write Tags - Duration: 00:00:00.2960296
+28.03.2017 11:33:36 - Finished Task Create a geography object foreach way - Duration: 00:00:39.9369933
+28.03.2017 11:33:58 - Finished Task Create the relations in the database - Duration: 00:00:21.8111809
+28.03.2017 11:33:58 - Finished Task Create all database indicies - Duration: 00:00:00.0030003
+28.03.2017 11:36:01 - Finished Task Custom SQL-Commands after importing - Duration: 00:02:03.3433331
+28.03.2017 11:36:01 - Totalduration: 00:06:54.8253551
+28.03.2017 12:02:53 - -----------------------------------------
+28.03.2017 12:02:53 - 
+28.03.2017 12:02:53 - 
+28.03.2017 12:02:53 - - Logging started . . .
+28.03.2017 12:02:53 - 
+28.03.2017 12:02:53 - 
+28.03.2017 12:02:53 - -----------------------------------------
+28.03.2017 12:10:26 - -----------------------------------------
+28.03.2017 12:10:26 - 
+28.03.2017 12:10:26 - 
+28.03.2017 12:10:26 - - Logging started . . .
+28.03.2017 12:10:26 - 
+28.03.2017 12:10:26 - 
+28.03.2017 12:10:26 - -----------------------------------------
+28.03.2017 12:11:48 - -----------------------------------------
+28.03.2017 12:11:48 - 
+28.03.2017 12:11:48 - 
+28.03.2017 12:11:48 - - Logging started . . .
+28.03.2017 12:11:48 - 
+28.03.2017 12:11:48 - 
+28.03.2017 12:11:48 - -----------------------------------------
+28.03.2017 12:12:10 - System.Data.SqlClient.SqlException (0x80131904): The server principal 'wms' already exists.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at osm2mssql.Importer.Tasks.TaskBase.ExecuteSqlCmd(String sqlCommand) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 125
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.CreateDatabase() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 37
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.DoTaskWork(String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 26
+   at osm2mssql.Importer.Tasks.TaskBase.RunTask(SqlConnectionStringBuilder connection, String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 233
+ClientConnectionId:31eca959-6325-468b-89af-288efa7cc529
+Error Number:15025,State:1,Class:16
+28.03.2017 12:34:03 - -----------------------------------------
+28.03.2017 12:34:03 - 
+28.03.2017 12:34:03 - 
+28.03.2017 12:34:03 - - Logging started . . .
+28.03.2017 12:34:03 - 
+28.03.2017 12:34:03 - 
+28.03.2017 12:34:03 - -----------------------------------------
+28.03.2017 12:41:06 - System.Data.SqlClient.SqlException (0x80131904): The server principal 'wms' already exists.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at osm2mssql.Importer.Tasks.TaskBase.ExecuteSqlCmd(String sqlCommand) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 125
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.CreateDatabase() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 37
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.DoTaskWork(String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 26
+   at osm2mssql.Importer.Tasks.TaskBase.RunTask(SqlConnectionStringBuilder connection, String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 233
+ClientConnectionId:17f17600-b930-42c4-b828-cf25128e5eae
+Error Number:15025,State:1,Class:16
+28.03.2017 13:02:47 - -----------------------------------------
+28.03.2017 13:02:47 - 
+28.03.2017 13:02:47 - 
+28.03.2017 13:02:47 - - Logging started . . .
+28.03.2017 13:02:47 - 
+28.03.2017 13:02:47 - 
+28.03.2017 13:02:47 - -----------------------------------------
+28.03.2017 13:09:13 - -----------------------------------------
+28.03.2017 13:09:13 - 
+28.03.2017 13:09:13 - 
+28.03.2017 13:09:13 - - Logging started . . .
+28.03.2017 13:09:13 - 
+28.03.2017 13:09:13 - 
+28.03.2017 13:09:13 - -----------------------------------------
+28.03.2017 13:09:28 - System.Data.SqlClient.SqlException (0x80131904): The login already has an account under a different user name.
+User or role 'wms' does not exist in this database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at osm2mssql.Importer.Tasks.TaskBase.ExecuteSqlCmd(String sqlCommand) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 125
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.CreateDatabase() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 37
+   at osm2mssql.Importer.Tasks.TaskCreateDatabase.DoTaskWork(String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\InitializeTasks\TaskCreateDatabase.cs:line 26
+   at osm2mssql.Importer.Tasks.TaskBase.RunTask(SqlConnectionStringBuilder connection, String osmFile, AttributeRegistry attributeRegistry) in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 233
+ClientConnectionId:d5c20828-fa82-41bd-8ba6-52392faef2be
+Error Number:15063,State:1,Class:16
+28.03.2017 13:53:47 - -----------------------------------------
+28.03.2017 13:53:47 - 
+28.03.2017 13:53:47 - 
+28.03.2017 13:53:47 - - Logging started . . .
+28.03.2017 13:53:47 - 
+28.03.2017 13:53:47 - 
+28.03.2017 13:53:47 - -----------------------------------------
+28.03.2017 13:54:01 - Finished Task Creates the database structure - Duration: 00:00:04.9434943
+28.03.2017 13:54:02 - Finished Task Install database-extensions - Duration: 00:00:00.8010801
+28.03.2017 13:54:48 - Table: tNode
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 13:54:58 - Table: tNode
+Bulk insert failed: System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+28.03.2017 13:55:02 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:02 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:02 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:02 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:02 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:02 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:03 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:04 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:04 - Table: tWayTag
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:04 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:04 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:04 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:05 - Table: tWayTag
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tWayCreation
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:06 - Table: tNode
+Bulk insert failed: System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010;  ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.SqlClient.SqlBulkCopy.CreateOrValidateConnection(String method)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at osm2mssql.Importer.Tasks.TaskBase.<>c__DisplayClass46_0.<WriteToDb>b__0() in C:\Users\Korsakov\Desktop\27.03\importer\osm2mssql\osm2mssql.Importer\Tasks\TaskBase.cs:line 175
+ClientConnectionId:b728d695-daae-417a-b9a7-fad20323e364
+Error Number:-2,State:0,Class:11
+28.03.2017 13:55:29 - Inserted 1285 relations
+28.03.2017 13:55:29 - Finished Task Reading all relations - Duration: 00:01:26.8616853
+28.03.2017 13:56:52 - Inserted 81527 ways
+28.03.2017 13:56:52 - Finished Task Read all ways - Duration: 00:02:48.6918675
+28.03.2017 13:57:37 - Inserted 1107903 nodes
+28.03.2017 13:57:37 - Finished Task Read all nodes - Duration: 00:03:34.9280755
+28.03.2017 13:57:49 - Finished Task Create indices on tRelation/tRelationTag - Duration: 00:00:12.1910000
+28.03.2017 13:58:38 - Finished Task Create indices on tWay/tNWayTag - Duration: 00:01:01.2380000
+28.03.2017 13:58:38 - Finished Task Create indices on tNode/tNodeTag - Duration: 00:01:01.4400000
+28.03.2017 13:58:39 - Finished Task Write Tags - Duration: 00:00:00.4780000
+28.03.2017 13:59:15 - Finished Task Create a geography object foreach way - Duration: 00:00:35.8000000
+28.03.2017 13:59:30 - Finished Task Create the relations in the database - Duration: 00:00:15.5060000
+28.03.2017 13:59:30 - Finished Task Create all database indicies - Duration: 00:00:00.0050000
+28.03.2017 14:09:04 - -----------------------------------------
+28.03.2017 14:09:04 - 
+28.03.2017 14:09:04 - 
+28.03.2017 14:09:04 - - Logging started . . .
+28.03.2017 14:09:04 - 
+28.03.2017 14:09:04 - 
+28.03.2017 14:09:04 - -----------------------------------------
+28.03.2017 14:09:50 - -----------------------------------------
+28.03.2017 14:09:50 - 
+28.03.2017 14:09:50 - 
+28.03.2017 14:09:50 - - Logging started . . .
+28.03.2017 14:09:50 - 
+28.03.2017 14:09:50 - 
+28.03.2017 14:09:50 - -----------------------------------------
+28.03.2017 14:10:11 - Finished Task Creates the database structure - Duration: 00:00:06.0376037
+28.03.2017 14:10:11 - Finished Task Install database-extensions - Duration: 00:00:00.0650065
+28.03.2017 14:10:51 - Inserted 1285 relations
+28.03.2017 14:10:51 - Finished Task Reading all relations - Duration: 00:00:39.5639560
+28.03.2017 14:13:17 - Inserted 81527 ways
+28.03.2017 14:13:17 - Finished Task Read all ways - Duration: 00:03:02.5452527
+28.03.2017 14:13:19 - Inserted 1107903 nodes
+28.03.2017 14:13:19 - Finished Task Read all nodes - Duration: 00:03:08.2108192
+28.03.2017 14:13:23 - Finished Task Create indices on tRelation/tRelationTag - Duration: 00:00:03.4763476
+28.03.2017 14:13:45 - Finished Task Create indices on tWay/tNWayTag - Duration: 00:00:26.0676065
+28.03.2017 14:13:45 - Finished Task Create indices on tNode/tNodeTag - Duration: 00:00:26.1116109
+28.03.2017 14:13:46 - Finished Task Write Tags - Duration: 00:00:00.4740474
+28.03.2017 14:15:27 - Finished Task Create a geography object foreach way - Duration: 00:01:41.2901280
+28.03.2017 14:15:45 - Finished Task Create the relations in the database - Duration: 00:00:18.2008199
+28.03.2017 14:15:45 - Finished Task Create all database indicies - Duration: 00:00:00.0030003
+28.03.2017 14:16:51 - Finished Task Custom SQL-Commands after importing - Duration: 00:01:05.6495643
+28.03.2017 14:16:51 - Totalduration: 00:06:46.1082232

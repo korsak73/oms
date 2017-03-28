@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="osm2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="osm2ModelStoreContainer">
+          <EntitySet Name="tNode" EntityType="osm2Model.Store.tNode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tNodeTag" EntityType="osm2Model.Store.tNodeTag" store:Type="Tables" store:Schema="dbo" store:Name="tNodeTag">
+            <DefiningQuery>SELECT 
+      [tNodeTag].[NodeId] AS [NodeId], 
+      [tNodeTag].[Typ] AS [Typ], 
+      [tNodeTag].[Info] AS [Info]
+      FROM [dbo].[tNodeTag] AS [tNodeTag]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tTagType" EntityType="osm2Model.Store.tTagType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tNodeTag" Association="osm2Model.Store.FK_tNodeTag">
+            <End Role="tNode" EntitySet="tNode" />
+            <End Role="tNodeTag" EntitySet="tNodeTag" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNodeTagTyp" Association="osm2Model.Store.FK_tNodeTagTyp">
+            <End Role="tTagType" EntitySet="tTagType" />
+            <End Role="tNodeTag" EntitySet="tNodeTag" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tNode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="location" Type="geography" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Während der Generierung sind Fehler aufgetreten:
+      Warnung 6002: Für Tabelle/Sicht 'osm2.dbo.tNodeTag' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.
+      -->
+        <EntityType Name="tNodeTag">
+          <Key>
+            <PropertyRef Name="NodeId" />
+            <PropertyRef Name="Typ" />
+            <PropertyRef Name="Info" />
+          </Key>
+          <Property Name="NodeId" Type="bigint" Nullable="false" />
+          <Property Name="Typ" Type="int" Nullable="false" />
+          <Property Name="Info" Type="nvarchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="tTagType">
+          <Key>
+            <PropertyRef Name="Typ" />
+          </Key>
+          <Property Name="Typ" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_tNodeTag">
+          <End Role="tNode" Type="osm2Model.Store.tNode" Multiplicity="1" />
+          <End Role="tNodeTag" Type="osm2Model.Store.tNodeTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tNodeTag">
+              <PropertyRef Name="NodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNodeTagTyp">
+          <End Role="tTagType" Type="osm2Model.Store.tTagType" Multiplicity="1" />
+          <End Role="tNodeTag" Type="osm2Model.Store.tNodeTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTagType">
+              <PropertyRef Name="Typ" />
+            </Principal>
+            <Dependent Role="tNodeTag">
+              <PropertyRef Name="Typ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="osm2Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="osm2Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tNode" EntityType="osm2Model.tNode" />
+          <EntitySet Name="tNodeTag" EntityType="osm2Model.tNodeTag" />
+          <AssociationSet Name="FK_tNodeTag" Association="osm2Model.FK_tNodeTag">
+            <End Role="tNode" EntitySet="tNode" />
+            <End Role="tNodeTag" EntitySet="tNodeTag" />
+          </AssociationSet>
+          <EntitySet Name="tTagType" EntityType="osm2Model.tTagType" />
+          <AssociationSet Name="FK_tNodeTagTyp" Association="osm2Model.FK_tNodeTagTyp">
+            <End Role="tTagType" EntitySet="tTagType" />
+            <End Role="tNodeTag" EntitySet="tNodeTag" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tNode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Geography" Name="location" Nullable="false" />
+          <Property Type="Double" Name="Latitude" Nullable="false" />
+          <Property Type="Double" Name="Longitude" Nullable="false" />
+          <NavigationProperty Name="tNodeTag" Relationship="osm2Model.FK_tNodeTag" FromRole="tNode" ToRole="tNodeTag" />
+        </EntityType>
+        <EntityType Name="tNodeTag">
+          <Key>
+            <PropertyRef Name="NodeId" />
+            <PropertyRef Name="Typ" />
+            <PropertyRef Name="Info" />
+          </Key>
+          <Property Type="Int64" Name="NodeId" Nullable="false" />
+          <Property Type="Int32" Name="Typ" Nullable="false" />
+          <Property Type="String" Name="Info" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tNode" Relationship="osm2Model.FK_tNodeTag" FromRole="tNodeTag" ToRole="tNode" />
+          <NavigationProperty Name="tTagType" Relationship="osm2Model.FK_tNodeTagTyp" FromRole="tNodeTag" ToRole="tTagType" />
+        </EntityType>
+        <Association Name="FK_tNodeTag">
+          <End Type="osm2Model.tNode" Role="tNode" Multiplicity="1" />
+          <End Type="osm2Model.tNodeTag" Role="tNodeTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tNodeTag">
+              <PropertyRef Name="NodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tTagType">
+          <Key>
+            <PropertyRef Name="Typ" />
+          </Key>
+          <Property Type="Int32" Name="Typ" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tNodeTag" Relationship="osm2Model.FK_tNodeTagTyp" FromRole="tTagType" ToRole="tNodeTag" />
+        </EntityType>
+        <Association Name="FK_tNodeTagTyp">
+          <End Type="osm2Model.tTagType" Role="tTagType" Multiplicity="1" />
+          <End Type="osm2Model.tNodeTag" Role="tNodeTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTagType">
+              <PropertyRef Name="Typ" />
+            </Principal>
+            <Dependent Role="tNodeTag">
+              <PropertyRef Name="Typ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="osm2ModelStoreContainer" CdmEntityContainer="osm2Entities">
+          <EntitySetMapping Name="tNode">
+            <EntityTypeMapping TypeName="osm2Model.tNode">
+              <MappingFragment StoreEntitySet="tNode">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNodeTag">
+            <EntityTypeMapping TypeName="osm2Model.tNodeTag">
+              <MappingFragment StoreEntitySet="tNodeTag">
+                <ScalarProperty Name="Info" ColumnName="Info" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tTagType">
+            <EntityTypeMapping TypeName="osm2Model.tTagType">
+              <MappingFragment StoreEntitySet="tTagType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

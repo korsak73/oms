@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model osm2mssql.WebApp.Models.ReverseGeocodingModel
+<h2>osm2mssql</h2>
+
+@Html.DropDownListFor(x => x.SelectedTagTyp, new SelectList(Model.TagTypes, "Typ", "Name", Model.SelectedTagTyp))<br />
+@Html.TextBox("searchTxt", null, new { id = "search", size = 100 })<br />
+<span id="result"></span><br />
+<img id="map" src="https://download-codeplex.sec.s-msft.com/Download?ProjectName=osm2mssql&DownloadId=339435&Build=20779" />
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#search").change(function () {
+                $("#result").text();
+                $("#map").hide();
+                $.ajax({
+                    dataType: "json",
+                    url: "api/ReverseGeocoding",
+                    data: {
+                        tagType : $("#SelectedTagTyp").val(),
+                        text : $(this).val()
+                    },
+                    success: function (result) {
+                        $("#result").text("Latitude: " + result.Latitude + " Longitude: " + result.Longitude);
+                        var url = 'http://ojw.dev.openstreetmap.org/StaticMap/?lat= ' + result.Latitude + '&lon=' + result.Longitude +'&z=14&layer=cloudmade_2&mode=Export&show=1';
+                        $("#map").attr("src", url);
+                        $("#map").show();
+
+                    },
+                    error: function () {
+                        $("#result").text("Leider kein Ergebnis");
+                    }
+                });
+            });
+        })
+    </script>
+}
