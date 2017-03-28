@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osm2mssql.Importer", "osm2mssql.Importer\osm2mssql.Importer.csproj", "{54255A28-2302-45B6-B428-BF4581355B26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osm2mssql.OsmDb2008", "osm2mssql.OsmDb2008\osm2mssql.OsmDb2008.csproj", "{755D3126-9C34-4A69-98F9-A8BB530EEAB5}"
@@ -18,31 +20,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A1B339
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D625B49-3D62-4DB7-AC1E-86088D56C59A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\result1.png = ..\..\result1.png
+		..\..\result2.png = ..\..\result2.png
+		..\..\user_property1.png = ..\..\user_property1.png
+		..\..\user_property2.png = ..\..\user_property2.png
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs15
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = osm2mssql.Importer\\osm2mssql.Importer.csproj
-		SccProjectName1 = osm2mssql.Importer
-		SccLocalPath1 = osm2mssql.Importer
-		SccProjectUniqueName2 = osm2mssql.OsmDb2008\\osm2mssql.OsmDb2008.csproj
-		SccProjectName2 = osm2mssql.OsmDb2008
-		SccLocalPath2 = osm2mssql.OsmDb2008
-		SccProjectUniqueName3 = osm2mssql.OsmDb2012\\osm2mssql.OsmDb2012.csproj
-		SccProjectName3 = osm2mssql.OsmDb2012
-		SccLocalPath3 = osm2mssql.OsmDb2012
-		SccProjectUniqueName4 = osm2mssql.InfoDAL\\osm2mssql.InfoDAL.csproj
-		SccProjectName4 = osm2mssql.InfoDAL
-		SccLocalPath4 = osm2mssql.InfoDAL
-		SccProjectUniqueName5 = osm2mssql.WebApp\\osm2mssql.WebApp.csproj
-		SccProjectName5 = osm2mssql.WebApp
-		SccLocalPath5 = osm2mssql.WebApp
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = osm2mssql.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -119,5 +105,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = osm2mssql.vsmdi
 	EndGlobalSection
 EndGlobal
